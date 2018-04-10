@@ -1,0 +1,60 @@
+15236280|[May]|tháng 5|the month following April and preceding June
+06879382|[C]|nốt Đô, gam Đô trưởng|(music) the keynote of the scale of C major
+15236602|[June]|tháng 6|the month following May and preceding July
+13856598|[west, due_west, westward, W]|hướng Tây, phía Tây|the cardinal compass point that is a 270 degrees
+13772852|[five_hundred, 500, D]|năm trăm|the cardinal number that is the product of one hundred and five
+13855574|[south, due_south, southward, S]|hướng Đông, phía Đông|the cardinal compass point that is at 180 degrees
+13772555|[hundred, 100, C, century, one_C]|một trăm, một thế kỷ|ten 10s
+13767056|[seven, 7, VII, sevener, heptad, septet, septenary]|bảy|the cardinal number that is the sum of six and one
+13772984|[thousand, one_thousand, 1000, M, K, chiliad, G, grand, thou, yard]|một ngàn|the cardinal number that is the product of 10 and 100
+13767410|[nine, 9, IX, niner, Nina_from_Carolina, ennead]|chín|the cardinal number that is the sum of eight and one
+13767226|[eight, 8, VIII, eighter, eighter_from_Decatur, octad, ogdoad, octonary, octet]|tám|the cardinal number that is the sum of seven and one
+15236963|[July]|tháng 7|the month following June and preceding August
+13766862|[six, 6, VI, sixer, sise, Captain_Hicks, half_a_dozen, sextet, sestet, sextuplet, hexad]|sáu|the cardinal number that is the sum of five and one
+15237535|[September, Sep, Sept]|tháng 9|the month following August and preceding October
+13766661|[five, 5, V, cinque, quint, quintet, fivesome, quintuplet, pentad, fin, Phoebe, Little_Phoebe]|năm|the cardinal number that is the sum of four and one
+15237911|[October, Oct]|tháng 10|the month following September and preceding November
+13772437|[ninety, 90, XC]|chín mươi|the cardinal number that is the product of ten and nine
+15237251|[August, Aug]|tháng 8|the month following July and preceding September
+13772304|[eighty, 80, LXXX, fourscore]|tám mươi|the cardinal number that is the product of ten and eight
+13772173|[seventy-eight, 78, LXXVIII]|bảy mươi tám|the cardinal number that is the sum of seventy and eight
+13772034|[seventy, 70, LXX]|bảy mươi|the cardinal number that is the product of ten and seven
+13771547|[thirty, 30, XXX]|ba mươi|the cardinal number that is the product of ten and three
+13771418|[twenty-nine, 29, XXIX]|hai mươi chín|the cardinal number that is the sum of twenty-eight and one
+13771286|[twenty-eight, 28, XXVIII]|hai mươi tám|the cardinal number that is the sum of twenty-seven and one
+13771157|[twenty-seven, 27, XXVII]|hai mươi bảy|the cardinal number that is the sum of twenty-six and one
+13771918|[sixty, 60, LX]|sáu mươi|the cardinal number that is the product of ten and six
+13854554|[east, due_east, eastward, E]|phương Đông, hướng Đông|the cardinal compass point that is at 90 degrees
+13771784|[fifty, 50, L]|năm mươi|the cardinal number that is the product of ten and five
+13771667|[forty, 40, XL]|bốn mươi|the cardinal number that is the product of ten and four
+13766184|[three, 3, III, trio, threesome, tierce, leash, troika, triad, trine, trinity, ternary, ternion, triplet, tercet, terzetto, trey, deuce-ace]|ba|the cardinal number that is the sum of one and one and one
+13766444|[four, 4, IV, tetrad, quatern, quaternion, quaternary, quaternity, quartet, quadruplet, foursome, Little_Joe]|bốn|the cardinal number that is the sum of three and one
+13765409|[two, 2, II, deuce]|hai|the cardinal number that is the sum of one and one or a numeral representing this number
+15238202|[November, Nov]|tháng 11|the month following October and preceding December
+13771030|[twenty-six, 26, XXVI]|hai mươi sáu|the cardinal number that is the sum of twenty-five and one
+15238570|[December, Dec]|tháng 12|the last (12th) month of the year
+13770268|[twenty, 20, XX]|hai mươi|the cardinal number that is the sum of nineteen and one
+13770129|[nineteen, 19, XIX]|mười chín|the cardinal number that is the sum of eighteen and one
+13770005|[eighteen, 18, XVIII]|mười tám|the cardinal number that is the sum of seventeen and one
+13769609|[fifteen, 15, XV]|mười lăm|the cardinal number that is the sum of fourteen and one
+13770633|[twenty-three, 23, XXIII]|hai mươi ba|the cardinal number that is the sum of twenty-two and one
+13853375|[north, due_north, northward, N]|phương Bắc, hướng Bắc|the cardinal compass point that is at 0 or 360 degrees
+13770507|[twenty-two, 22, XXII]|hai mươi hai|the cardinal number that is the sum of twenty-one and one
+13769488|[fourteen, 14, XIV]|mười bốn|the cardinal number that is the sum of thirteen and one
+13770386|[twenty-one, 21, XXI]|hai mươi mốt|the cardinal number that is the sum of twenty and one
+13769339|[thirteen, 13, XIII, baker's_dozen, long_dozen]|mười ba|the cardinal number that is the sum of twelve and one
+13770903|[twenty-five, 25, XXV]|hai mươi lăm|the cardinal number that is the sum of twenty-four and one
+13769865|[seventeen, 17, XVII]|mười bảy|the cardinal number that is the sum of sixteen and one
+13770762|[twenty-four, 24, XXIV, two_dozen]|hai mươi bốn|the cardinal number that is the sum of twenty-three and one
+13769746|[sixteen, 16, XVI]|mười sáu|the cardinal number that is the sum of fifteen and one
+15234841|[January, Jan]|tháng 1|the first month of the year; begins 10 days after the winter solstice
+05408203|[A, type_A, group_A]|nhóm máu A|the blood group whose red cells carry the A antigen
+05408572|[O, type_O, group_O]|nhóm máu O|the blood group whose red cells carry neither the A nor B antigens; "people with type O blood are universal donors"
+13764713|[one, 1, I, ace, single, unity]|một|the smallest whole number or a numeral representing this number; "he has the one but will need a two and three to go with it"; "they had lunch at one"
+05408321|[B, type_B, group_B]|nhóm máu B|the blood group whose red cells carry the B antigen
+15235282|[February, Feb]|tháng 2|the month following January and preceding March
+15235985|[April, Apr]|tháng 4|the month following March and preceding May
+13768652|[ten, 10, X, tenner, decade]|mười|the cardinal number that is the sum of nine and one; the base of the decimal system
+15235666|[March, Mar]|tháng 3|the month following February and preceding April
+13768925|[twelve, 12, XII, dozen]|mười hai|the cardinal number that is the sum of eleven and one
+13768812|[eleven, 11, XI]|mười một|the cardinal number that is the sum of ten and one
