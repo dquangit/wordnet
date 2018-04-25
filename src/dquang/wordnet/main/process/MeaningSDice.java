@@ -126,6 +126,7 @@ public class MeaningSDice {
             }
         }
         float sdice = 2*(listEqualWord.size())*1.0f/(word1Array.length + word2Array.length);
+//        System.out.println(word1 + " - " + word2 + " " + sdice);
         return sdice;
     }
 }

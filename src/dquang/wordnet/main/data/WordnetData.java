@@ -33,7 +33,7 @@ public class WordnetData {
 
     }
 
-    public static WordnetData getInstance() {
+    public static synchronized WordnetData getInstance() {
         if (instance == null) {
             instance = new WordnetData();
         }
@@ -44,9 +44,9 @@ public class WordnetData {
      * Load synsets and wordform.
      */
     public WordnetData loadData() throws IOException {
+        dictionary = loadDictionary();
         wordForms = loadWordForm();
         synsets = loadSynset();
-        parseDictionaryToMap();
         loadSpecialCases();
         loadSyncDict();
         return this;
@@ -59,9 +59,6 @@ public class WordnetData {
      * @return
      */
     private Map<String, WordForm> loadWordForm() throws IOException {
-        dictionary = loadDictionary();
-        Map<String, List<String>> monthsMap = loadMonths();
-        dictionary.putAll(monthsMap);
         Map<String, WordForm> wordFormMap = new HashMap<>();
         List<String> fileContent = loadFile(INDEX_PATH);
         for (String line : fileContent) {
@@ -102,32 +99,16 @@ public class WordnetData {
 
             if (line.startsWith("-")) {
                 List<String> currentListMeaning = dictionary.get(currentWord);
-                String meaning = line.replace("-", "");
+                String meaning = line.substring(1);
+                meaning = meaning.trim();
+                if (meaning.isEmpty()) {
+                    continue;
+                }
                 currentListMeaning.add(meaning.trim());
                 dictionary.put(currentWord, currentListMeaning);
             }
         }
         return dictionary;
-    }
-
-    private void parseDictionaryToMap() {
-        meaningWordFormMap = new HashMap<>();
-        dictionary.forEach(new BiConsumer<String, List<String>>() {
-            @Override
-            public void accept(String word, List<String> lines) {
-                for (String meaningLine : lines) {
-                    String[] meaningList = meaningLine.trim().split(",");
-                    for (String meaning : meaningList) {
-                        Set<String> words = meaningWordFormMap.get(meaning);
-                        if (words == null) {
-                            words = new HashSet<>();
-                        }
-                        words.add(word);
-                        meaningWordFormMap.put(meaning, words);
-                    }
-                }
-            }
-        });
     }
 
     private void loadSpecialCases() throws IOException {
@@ -137,7 +118,7 @@ public class WordnetData {
     }
 
     private void parseSpecialCaseLine(String line) {
-        String[] lineArray = line.split("|");
+        String[] lineArray = line.split("\\|");
         String synsetId = lineArray[0];
         String meaningArray = lineArray[2];
         String[] meaningList = meaningArray.split(",");
@@ -240,11 +221,8 @@ public class WordnetData {
             }
         }
 
-        int glossSeparatedPosition = string.indexOf("|");
-        String gloss = "";
-        if (glossSeparatedPosition != - 1) {
-            gloss = string.substring(glossSeparatedPosition + 2).trim();
-        }
+        String[] dataSynsetGlossSplit = string.split("\\|");
+        String gloss = dataSynsetGlossSplit[1].trim();
 
         List<String> children = new ArrayList<>();
         List<String> parents = new ArrayList<>();
@@ -288,7 +266,9 @@ public class WordnetData {
     public List<WordForm> getWordFormBySynset(Synset synset) {
         List<WordForm> wordFormList = new ArrayList<>();
         for (String lemma : synset.getWords()) {
+            if (lemma != null && !lemma.isEmpty()) {
                 wordFormList.add(wordForms.get(lemma));
+            }
         }
         return wordFormList;
     }
@@ -327,14 +307,12 @@ public class WordnetData {
 
     public List<String> getSyncWords(String word) {
         List<String> result = syncDictMap.get(word);
-        if (result == null) {
-            return new ArrayList<>();
-        }
-        return result;
+        return processResult(result);
     }
 
     public List<String> getWordMeaning(String word) {
-        return dictionary.get(word);
+        List<String> result = dictionary.get(word);
+        return processResult(result);
     }
 
     public WordForm getWordFormByLemma(String lemma) {
@@ -379,6 +357,10 @@ public class WordnetData {
 
     public List<String> getSpecialCaseMeaning(String synsetId) {
         List<String> result = specialCaseMap.get(synsetId);
+        return processResult(result);
+    }
+
+    private <T> List<T> processResult(List<T> result) {
         if (result == null) {
             return new ArrayList<>();
         }

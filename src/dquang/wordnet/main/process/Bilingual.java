@@ -47,7 +47,6 @@ public class Bilingual {
      * @return list contain all cases.
      */
     private List<BilingualCase> initAllCases() {
-        List<BilingualCase> caseList = new ArrayList<>();
         BilingualCase caseSpecial = this::getSpecialCaseMeaning;
         BilingualCase case1 = this::getSimilarMeaningInAllWordForm;
         BilingualCase case2 = this::getSynsetContainSingleValueWordFormMeaning;
@@ -56,15 +55,10 @@ public class Bilingual {
         BilingualCase case33 = this::getMeaningFromGloss;
         BilingualCase case32B1 = this::getMeaningFromSynonymousNearestSynsets;
         BilingualCase case33B1 = this::getMeaningFromSynonymousNounsInGloss;
-        caseList.add(caseSpecial);
-        caseList.add(case1);
-        caseList.add(case2);
-        caseList.add(case31);
-        caseList.add(case32);
-        caseList.add(case33);
-        caseList.add(case32B1);
-        caseList.add(case33B1);
-        return caseList;
+        return new ArrayList<>(
+                Arrays.asList(
+                        caseSpecial, case1, case2, case31,
+                        case32, case33, case32B1, case33B1));
     }
 
     /**
@@ -172,13 +166,18 @@ public class Bilingual {
 
             if (singleValueWordFormList.size() > 1) {
                 Map<String, Integer> meaningCounter = countMeaning(singleValueWordFormList);
-                if (getMaxRepeatTime(meaningCounter) >= 2) {
-                    List<String> result = getWordsHasMaximumRepeatTimes(meaningCounter);
-                    if (!result.isEmpty()) {
-                        synsetMeaning
-                                .setMeanings(result);
-                        return synsetMeaning;
+                List<String> result = new ArrayList<>();
+                if (getMaxRepeatTime(meaningCounter) == 1) {
+                    for (WordForm wordForm : singleValueWordFormList) {
+                        result.addAll(wordForm.getMeanings());
                     }
+                } else {
+                    result = getWordsHasMaximumRepeatTimes(meaningCounter);
+                }
+                if (!result.isEmpty()) {
+                    synsetMeaning
+                            .setMeanings(result);
+                    return synsetMeaning;
                 }
             }
 
@@ -221,7 +220,15 @@ public class Bilingual {
                     return synsetMeaning;
                 }
 
-                result = getMeaningFromSynonymousDict(wordForms);
+                List<WordForm> synonymousWordForms = getSynonymousWordFormList(wordForms);
+//                System.out.println(wordForms);
+//                System.out.println(synonymousWordForms);
+                result = getSimilarMeanings(wordForms, synonymousWordForms);
+
+                if (result.isEmpty()) {
+                    result = getMeaningFromSynonymousDict(synset);
+                }
+
                 if (!result.isEmpty()) {
                     synsetMeaning
                             .setCaseName("3.1.B1")
@@ -245,7 +252,6 @@ public class Bilingual {
     private SynsetMeaning getMeaningFromNearestSynsets(Synset synset) {
         SynsetMeaning synsetMeaning = SynsetMeaning.newInstance(synset);
         if (synset.getWords().size() > 0) {
-            Set<String> result = new HashSet<>();
             List<WordForm> wordForms = wordnetData.getWordFormBySynset(synset);
             List<Synset> nearestSynsets = wordnetData.getNearestSynsets(synset);
             List<WordForm> wordFormListInNearestSynsets = new ArrayList<>();
@@ -253,22 +259,21 @@ public class Bilingual {
                 wordFormListInNearestSynsets.addAll(wordnetData.getWordFormBySynset(nearestSynset));
             }
 
-            for (WordForm wordForm : wordForms) {
-                for (WordForm nearestWordform : wordFormListInNearestSynsets) {
-                    result.addAll(getCommonMeaningOfWordforms(wordForm, nearestWordform));
-                }
-            }
+            List<String> result = getSimilarMeanings(wordForms, wordFormListInNearestSynsets);
 
             if (!result.isEmpty()) {
                 synsetMeaning.setCaseName("3.2A")
-                        .setMeanings(new ArrayList<>(result));
+                        .setMeanings(result);
                 return synsetMeaning;
             }
-
-            result.addAll(MeaningSDice.getMeaningListBaseOnSDice(wordForms, wordFormListInNearestSynsets));
+            for (WordForm wordForm : wordFormListInNearestSynsets) {
+                if (wordForm != null)
+                System.out.println(wordForm.getLemma() + ": " + wordForm.getMeanings());
+            }
+            result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, wordFormListInNearestSynsets);
             if (!result.isEmpty()) {
                 synsetMeaning.setCaseName("3.2B")
-                        .setMeanings(new ArrayList<>(result));
+                        .setMeanings(result);
                 return synsetMeaning;
             }
         }
@@ -288,23 +293,29 @@ public class Bilingual {
         if (synset.getWords().size() > 0) {
             List<WordForm> nounWordFormList = getNounWordFormListFromGloss(synset);
             List<WordForm> wordForms = wordnetData.getWordFormBySynset(synset);
-            Set<String> resultSet = new HashSet<>();
-            for (WordForm wordForm : wordForms) {
-                for (WordForm nounWordform : nounWordFormList) {
-                    resultSet.addAll(getCommonMeaningOfWordforms(wordForm, nounWordform));
-                }
-            }
+//            Set<String> resultSet = new HashSet<>();
+//            for (WordForm wordForm : wordForms) {
+//                for (WordForm nounWordform : nounWordFormList) {
+//                    resultSet.addAll(getCommonMeaningOfWordforms(wordForm, nounWordform));
+//                }
+//            }
+//            System.out.println(wordForms);
+//            for (WordForm wordForm : nounWordFormList) {
+//                System.out.println(wordForm.getLemma() + ": " + wordForm.getMeanings());
+//            }
+//            System.out.println();
+            List<String> result = getSimilarMeanings(wordForms, nounWordFormList);
 
-            if (!resultSet.isEmpty()) {
+            if (!result.isEmpty()) {
                 synsetMeaning.setCaseName("Case 3.3A")
-                        .setMeanings(new ArrayList<>(resultSet));
+                        .setMeanings(result);
                 return synsetMeaning;
             }
 
-            List<String> result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, nounWordFormList);
+            result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, nounWordFormList);
             if (!result.isEmpty()) {
                 synsetMeaning.setCaseName("Case 3.3B")
-                        .setMeanings(new ArrayList<>(resultSet));
+                        .setMeanings(result);
                 return synsetMeaning;
             }
         }
@@ -325,8 +336,31 @@ public class Bilingual {
             wordFormListInNearestSynsets.addAll(wordnetData.getWordFormBySynset(nearestSynset));
         }
 
-        List<WordForm> syncWordForm = getSyncWordFormList(wordFormListInNearestSynsets);
-        List<String> result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, syncWordForm);
+        List<WordForm> synonymousWordForm = getSynonymousWordFormList(wordForms);
+        List<WordForm> synonymousNearestWordForm = getSynonymousWordFormList(wordFormListInNearestSynsets);
+
+        List<String> result = getSimilarMeanings(wordForms, synonymousNearestWordForm);
+
+        if (result.isEmpty()) {
+            result = getSimilarMeanings(synonymousWordForm, wordFormListInNearestSynsets);
+        }
+
+        if (result.isEmpty()) {
+            result = getSimilarMeanings(synonymousWordForm, synonymousNearestWordForm);
+        }
+
+        if (result.isEmpty()) {
+            result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, synonymousNearestWordForm);
+        }
+
+        if (result.isEmpty()) {
+            result = MeaningSDice.getMeaningListBaseOnSDice(synonymousWordForm, wordFormListInNearestSynsets);
+        }
+
+        if (result.isEmpty()) {
+            result = MeaningSDice.getMeaningListBaseOnSDice(synonymousWordForm, synonymousNearestWordForm);
+        }
+
         if (!result.isEmpty()) {
             synsetMeaning.setCaseName("Case 3.2.B1")
                     .setMeanings(result);
@@ -338,9 +372,40 @@ public class Bilingual {
     private SynsetMeaning getMeaningFromSynonymousNounsInGloss(Synset synset) {
         SynsetMeaning synsetMeaning = SynsetMeaning.newInstance(synset);
         List<WordForm> wordForms = wordnetData.getWordFormBySynset(synset);
-        List<WordForm> nounWordFormList = getNounWordFormListFromGloss(synset);
-        List<WordForm> syncWordForm = getSyncWordFormList(nounWordFormList);
-        List<String> result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, syncWordForm);
+        List<WordForm> nounWordFormListFromGloss = getNounWordFormListFromGloss(synset);
+        List<WordForm> synonymousWordForm = getSynonymousWordFormList(wordForms);
+        List<WordForm> synonymousWordFormFromGloss = getSynonymousWordFormList(nounWordFormListFromGloss);
+//        System.out.println("SYNSET INFORMATION");
+//        System.out.println(synset);
+//        System.out.println(nounWordFormListFromGloss);
+//        System.out.println("END INFORMATION");
+        List<String> result = getSimilarMeanings(wordForms, synonymousWordFormFromGloss);
+
+        if (result.isEmpty()) {
+//            System.out.println("fuck 1");
+            result = getSimilarMeanings(synonymousWordForm, nounWordFormListFromGloss);
+        }
+
+        if (result.isEmpty()) {
+//            System.out.println("fuck 2");
+            result = getSimilarMeanings(synonymousWordForm, synonymousWordFormFromGloss);
+        }
+
+        if (result.isEmpty()) {
+//            System.out.println("fuck 3");
+            result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, synonymousWordFormFromGloss);
+        }
+
+        if (result.isEmpty()) {
+//            System.out.println("fuck 4");
+            result = MeaningSDice.getMeaningListBaseOnSDice(synonymousWordForm, nounWordFormListFromGloss);
+        }
+
+        if (result.isEmpty()) {
+//            System.out.println("fuck 4");
+            result = MeaningSDice.getMeaningListBaseOnSDice(synonymousWordForm, synonymousWordFormFromGloss);
+        }
+
         if (!result.isEmpty()) {
             synsetMeaning.setCaseName("Case 3.3.B1")
                     .setMeanings(result);
@@ -350,25 +415,35 @@ public class Bilingual {
     }
 
     /**/
-    private List<WordForm> getSyncWordFormList(List<WordForm> wordForms) {
+    private List<WordForm> getSynonymousWordFormList(List<WordForm> wordForms) {
         List<WordForm> syncWordForms = new ArrayList<>();
         for (WordForm wordForm : wordForms) {
             List<String> meanings = getWordFormMeanings(wordForm);
+            Set<String> synonymousMeanings = new HashSet<>();
             for (String meaning : meanings) {
                 List<String> syncWords = wordnetData.getSyncWords(meaning);
                 if (syncWords.isEmpty()) {
                     continue;
                 }
-                WordForm synWordForm = new WordForm()
-                        .setMeanings(syncWords);
-                syncWordForms.add(synWordForm);
+                synonymousMeanings.addAll(syncWords);
             }
+
+            if (synonymousMeanings.isEmpty()) {
+                continue;
+            }
+
+            WordForm synonymousWordForm = new WordForm()
+                    .setMeanings(new ArrayList<>(synonymousMeanings))
+                    .setLemma(wordForm.getLemma());
+            syncWordForms.add(synonymousWordForm);
+
         }
         return syncWordForms;
     }
 
     private boolean isNoun(String word) {
-        return !(wordnetData.getWordFormByLemma(word) == null);
+        WordForm wordForm = wordnetData.getWordFormByLemma(word);
+        return (wordForm != null) || (!wordnetData.getWordMeaning(word).isEmpty());
     }
 
     private List<String> getCommonMeaningOfWordforms(WordForm wordForm1, WordForm wordForm2) {
@@ -380,6 +455,9 @@ public class Bilingual {
         List<String> result = new ArrayList<>();
         for (String meaning1 : meaningsList1) {
             for (String meaning2 : meaningsList2) {
+                if (meaning1.isEmpty() || meaning2.isEmpty()) {
+                    continue;
+                }
                 if (meaning1.equals(meaning2)) {
                     result.add(meaning1);
                 }
@@ -392,7 +470,7 @@ public class Bilingual {
         if (wordForm == null) {
             return new ArrayList<>();
         }
-        List<String> meaningLines = wordForm.getMeanings();
+        List<String> meaningLines = wordnetData.getWordMeaning(wordForm.getLemma());
         Set<String> result = new HashSet<>();
         if (meaningLines == null) {
             return new ArrayList<>();
@@ -461,14 +539,11 @@ public class Bilingual {
      */
     private boolean isWordFormSingleValue(WordForm wordForm) {
         List<Synset> listSynsetBelong = wordnetData.getSynsetListByWordForm(wordForm);
-        List<String> meanings = wordnetData.getWordMeaning(wordForm.getLemma());
-        if (meanings == null || listSynsetBelong == null) {
-            return false;
-        }
-        return meanings.size() == 1 && listSynsetBelong.size() == 1;
+        List<String> meanings = wordForm.getMeanings();
+        return ((meanings.size() == 1) && (listSynsetBelong.size() == 1));
     }
 
-    public boolean isSynsetSpecialCase(@NotNull Synset synset) {
+    private boolean isSynsetSpecialCase(@NotNull Synset synset) {
         for (String word : synset.getWords()) {
             if (Character.isUpperCase(word.charAt(0))) {
                 return true;
@@ -485,17 +560,25 @@ public class Bilingual {
      * @return list noun word form in gloss.
      */
     private List<WordForm> getNounWordFormListFromGloss(Synset synset) {
-        String gloss = synset.getGloss().trim().replace("\"", "");
+        String gloss = synset.getGloss().trim()
+                .replace("\"", "")
+                .replace(",","")
+                .replace(";", "")
+                .replace("(", "")
+                .replace(")", "");
         String[] glossSplitted = gloss.split(" ");
-        Map<String, Boolean> synsetWordMap = new HashMap<>();
-        for (String word : synset.getWords()) {
-            synsetWordMap.put(word, true);
-        }
 
         List<WordForm> nounWordFormList = new ArrayList<>();
         for (String word : glossSplitted) {
-            if (isNoun(word) && synsetWordMap.get(word) == null) {
-                nounWordFormList.add(wordnetData.getWordFormByLemma(word));
+            word = word.trim();
+            if (isNoun(word) && !synset.getWords().contains(word)) {
+                WordForm wordForm = wordnetData.getWordFormByLemma(word);
+                if (wordForm == null) {
+                    wordForm = new WordForm()
+                            .setLemma(word)
+                            .setMeanings(wordnetData.getWordMeaning(word));
+                }
+                nounWordFormList.add(wordForm);
             }
         }
         return nounWordFormList;
@@ -543,11 +626,47 @@ public class Bilingual {
      * @param wordForms not null.
      * @return common meanings of input's meaning and synonymous, or between all synonymous.
      */
-    private List<String> getMeaningFromSynonymousDict(List<WordForm> wordForms) {
-        List<WordForm> syncWordForms = getSyncWordFormList(wordForms);
-        List<String> result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, syncWordForms);
-        if (result.isEmpty()) {
-            result = MeaningSDice.getMeaningListBaseOnSDice(syncWordForms, syncWordForms);
+    private List<String> getMeaningFromSynonymousDict(Synset synset) {
+        List<WordForm> wordForms = wordnetData.getWordFormBySynset(synset);
+        List<WordForm> synonymousWordFormList = getSynonymousWordFormList(wordForms);
+
+        List<MeaningSDice> meaningSDices = new ArrayList<>();
+        float maxSdice = 0;
+        for (WordForm wordForm1 : wordForms) {
+            for (WordForm wordForm2 : synonymousWordFormList) {
+                if (wordForm1 == null || wordForm2 == null) {
+                    continue;
+                }
+                if (!wordForm1.getLemma().equals(wordForm2.getLemma())) {
+                    MeaningSDice meaningSDice = MeaningSDice
+                            .getMeaningListBaseOnSDice(wordForm1, wordForm2);
+                    meaningSDices.add(meaningSDice);
+                    if (maxSdice < meaningSDice.getSdice()) {
+                        maxSdice = meaningSDice.getSdice();
+                    }
+                }
+            }
+        }
+        Set<String> result = new HashSet<>();
+        for (MeaningSDice meaningSDice : meaningSDices) {
+            if (meaningSDice.getSdice() == maxSdice) {
+                result.addAll(meaningSDice.getListMeaning());
+            }
+        }
+        return new ArrayList<>(result);
+    }
+
+    private List<String> getSimilarMeanings(List<WordForm> firstWordForm, List<WordForm> secondWordForm) {
+        List<String> result = new ArrayList<>();
+        for (WordForm first : firstWordForm) {
+            for (WordForm second : secondWordForm) {
+                if (first == null || second == null) {
+                    continue;
+                }
+                if (!first.getLemma().equals(second.getLemma())) {
+                    result.addAll(getCommonMeaningOfWordforms(first, second));
+                }
+            }
         }
         return result;
     }

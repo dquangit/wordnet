@@ -56,12 +56,9 @@ public class SynsetMeaning {
         if (stringList.isEmpty()) {
             return "";
         }
-        StringBuilder stringBuilder = new StringBuilder();
-        stringList.forEach(string -> {
-            stringBuilder.append(string);
-            stringBuilder.append(", ");
-        });
-        String result = stringBuilder.toString();
-        return result.substring(0, result.lastIndexOf(","));
+
+        return stringList.toString()
+                .replace("[", "")
+                .replace("]", "");
     }
 }

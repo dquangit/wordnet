@@ -1,5 +1,6 @@
 package dquang.wordnet.main.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WordForm {
@@ -27,7 +28,7 @@ public class WordForm {
     }
 
     public List<String> getMeanings() {
-        return meanings;
+        return meanings == null? new ArrayList<>() : meanings;
     }
 
     public WordForm setMeanings(List<String> meanings) {
