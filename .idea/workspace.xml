@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d8ae4e3-3eb1-44f0-8186-e145f93116e3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/libs/slf4j-api-1.7.25.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/dquang/wordnet/main/out/ExcelOutput.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/dquang/wordnet/main/out/ExportToXlsx.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jxls_2_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jxls_2_4_0.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/data/ev.txt" afterPath="$PROJECT_DIR$/data/ev.txt" />
       <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/Main$1.class" afterPath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/Main$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/Main$2.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/Main.class" afterPath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/data/WordnetData$1.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/data/WordnetData.class" afterPath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/data/WordnetData.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/entity/SynsetMeaning.class" afterPath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/entity/SynsetMeaning.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/entity/WordForm.class" afterPath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/entity/WordForm.class" />
       <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/process/Bilingual.class" afterPath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/process/Bilingual.class" />
       <change beforePath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/process/MeaningSDice.class" afterPath="$PROJECT_DIR$/out/production/wordnet/dquang/wordnet/main/process/MeaningSDice.class" />
-      <change beforePath="$PROJECT_DIR$/output/result.txt" afterPath="$PROJECT_DIR$/output/result.txt" />
       <change beforePath="$PROJECT_DIR$/src/dquang/wordnet/main/Main.java" afterPath="$PROJECT_DIR$/src/dquang/wordnet/main/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/dquang/wordnet/main/data/WordnetData.java" afterPath="$PROJECT_DIR$/src/dquang/wordnet/main/data/WordnetData.java" />
-      <change beforePath="$PROJECT_DIR$/src/dquang/wordnet/main/entity/SynsetMeaning.java" afterPath="$PROJECT_DIR$/src/dquang/wordnet/main/entity/SynsetMeaning.java" />
-      <change beforePath="$PROJECT_DIR$/src/dquang/wordnet/main/entity/WordForm.java" afterPath="$PROJECT_DIR$/src/dquang/wordnet/main/entity/WordForm.java" />
       <change beforePath="$PROJECT_DIR$/src/dquang/wordnet/main/process/Bilingual.java" afterPath="$PROJECT_DIR$/src/dquang/wordnet/main/process/Bilingual.java" />
       <change beforePath="$PROJECT_DIR$/src/dquang/wordnet/main/process/MeaningSDice.java" afterPath="$PROJECT_DIR$/src/dquang/wordnet/main/process/MeaningSDice.java" />
     </list>
@@ -34,34 +24,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="64">
+              <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
               <folding>
-                <element signature="e#1360#1361#0" expanded="true" />
-                <element signature="e#1446#1447#0" expanded="true" />
+                <element signature="e#1403#1404#0" expanded="true" />
+                <element signature="e#1489#1490#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ev.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/ev.txt">
+      <file leaf-file-name="index.noun" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/index.noun">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="196841" column="18" lean-forward="true" selection-start-line="196841" selection-start-column="18" selection-end-line="196841" selection-end-column="18" />
+            <state relative-caret-position="154">
+              <caret line="72543" column="40" lean-forward="false" selection-start-line="72543" selection-start-column="40" selection-end-line="72543" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bilingual.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data.noun" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/data.noun">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="78570" column="42" lean-forward="false" selection-start-line="78570" selection-start-column="42" selection-end-line="78570" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bilingual.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/process/Bilingual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="269" column="36" lean-forward="false" selection-start-line="269" selection-start-column="36" selection-end-line="269" selection-end-column="36" />
+            <state relative-caret-position="134">
+              <caret line="211" column="25" lean-forward="true" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="out.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/out.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="26" column="66" lean-forward="false" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MeaningSDice.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/process/MeaningSDice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="127" column="48" lean-forward="false" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -70,8 +90,8 @@
       <file leaf-file-name="WordnetData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/data/WordnetData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-338">
-              <caret line="84" column="38" lean-forward="false" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+            <state relative-caret-position="234">
+              <caret line="87" column="40" lean-forward="false" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
               <folding>
                 <element signature="e#11208#11209#0" expanded="true" />
                 <element signature="e#11251#11252#0" expanded="true" />
@@ -82,6 +102,26 @@
                 <element signature="e#11477#11478#0" expanded="true" />
                 <element signature="e#11507#11508#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ev.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/ev.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="78723" column="1" lean-forward="true" selection-start-line="78723" selection-start-column="1" selection-end-line="78723" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Synset.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/entity/Synset.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,36 +137,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>@draw</find>
-      <find>extortion</find>
-      <find>money</find>
-      <find>@money</find>
-      <find>@extortion</find>
-      <find>00786588</find>
-      <find>coocxê</find>
-      <find>3.3A</find>
-      <find>@breaking</find>
-      <find>breaking</find>
-      <find>&gt;&gt;&gt; breaking</find>
-      <find>getwordfo</find>
-      <find>'breaking'</find>
-      <find>isnou</find>
-      <find>getwordformbyle</find>
-      <find>|</find>
-      <find>stay</find>
-      <find>loadsyn</find>
-      <find>ecclesiasticism</find>
-      <find>system.ou</find>
-      <find>3.3B</find>
       <find>@or</find>
-      <find>@tops</find>
-      <find>tops</find>
       <find>system.</find>
-      <find>system</find>
-      <find>system.out</find>
       <find>getMeaningListBaseOnSDice</find>
       <find>3.2</find>
       <find>educational institution</find>
+      <find>s</find>
+      <find>system.out</find>
+      <find>@tops</find>
+      <find>3.3B</find>
+      <find>tops</find>
+      <find>top</find>
+      <find>!</find>
+      <find>13279912</find>
+      <find>13276044</find>
+      <find>13314269</find>
+      <find>13354062</find>
+      <find>single</find>
+      <find>case 3.B</find>
+      <find>0.8</find>
+      <find>3.2A</find>
+      <find>gloss</find>
+      <find>negativity</find>
+      <find>13879205</find>
+      <find>system</find>
+      <find>load</find>
+      <find>case 1</find>
+      <find>food</find>
+      <find>@food</find>
+      <find>case 2</find>
+      <find>case 3</find>
     </findStrings>
     <replaceStrings>
       <replace>|</replace>
@@ -158,10 +198,10 @@
         <option value="$PROJECT_DIR$/src/dquang/wordnet/main/out/ExportToXlsx.java" />
         <option value="$PROJECT_DIR$/src/dquang/wordnet/main/entity/SynsetMeaning.java" />
         <option value="$PROJECT_DIR$/src/dquang/wordnet/main/entity/WordForm.java" />
-        <option value="$PROJECT_DIR$/src/dquang/wordnet/main/process/MeaningSDice.java" />
         <option value="$PROJECT_DIR$/data/ev.txt" />
         <option value="$PROJECT_DIR$/src/dquang/wordnet/main/data/WordnetData.java" />
         <option value="$PROJECT_DIR$/src/dquang/wordnet/main/process/Bilingual.java" />
+        <option value="$PROJECT_DIR$/src/dquang/wordnet/main/process/MeaningSDice.java" />
         <option value="$PROJECT_DIR$/src/dquang/wordnet/main/Main.java" />
       </list>
     </option>
@@ -228,6 +268,41 @@
             <path>
               <item name="wordnet" type="b2602c69:ProjectViewProjectNode" />
               <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wordnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wordnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wordnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+              <item name="dquang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wordnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+              <item name="dquang" type="462c0819:PsiDirectoryNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wordnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wordnet" type="462c0819:PsiDirectoryNode" />
               <item name="output" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -273,10 +348,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -457,42 +532,53 @@
       <workItem from="1524139448854" duration="1419000" />
       <workItem from="1524141287143" duration="8408000" />
       <workItem from="1524157215859" duration="9430000" />
-      <workItem from="1524675415881" duration="11707000" />
+      <workItem from="1524675415881" duration="11769000" />
+      <workItem from="1524730167984" duration="84000" />
+      <workItem from="1524818841543" duration="2523000" />
+      <workItem from="1525357495094" duration="1159000" />
+      <workItem from="1527467839190" duration="7593000" />
+      <workItem from="1527492290399" duration="609000" />
+      <workItem from="1527655582707" duration="294000" />
+      <workItem from="1527694609926" duration="42000" />
+      <workItem from="1527793137630" duration="317000" />
+      <workItem from="1527793486473" duration="3000" />
+      <workItem from="1527793499856" duration="150000" />
+      <workItem from="1527813260147" duration="1817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243330000" />
+    <option name="totallyTimeSpent" value="261383000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <frame x="10" y="47" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27955273" sideWeight="0.50292826" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4347826" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4347826" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33763278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4074355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -512,30 +598,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/data/WordnetData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="e#11208#11209#0" expanded="true" />
-            <element signature="e#11251#11252#0" expanded="true" />
-            <element signature="e#11303#11304#0" expanded="true" />
-            <element signature="e#11347#11348#0" expanded="true" />
-            <element signature="e#11398#11399#0" expanded="true" />
-            <element signature="e#11430#11431#0" expanded="true" />
-            <element signature="e#11477#11478#0" expanded="true" />
-            <element signature="e#11507#11508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="13" column="126" lean-forward="false" selection-start-line="13" selection-start-column="126" selection-end-line="13" selection-end-column="126" />
           <folding>
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -568,16 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-          <folding>
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#841#842#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#938#939#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-            <element signature="e#1193#1194#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,8 +653,8 @@
         <state relative-caret-position="198">
           <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -628,16 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#841#842#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#938#939#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-            <element signature="e#1193#1194#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,8 +703,8 @@
         <state relative-caret-position="198">
           <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -688,16 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#841#842#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#938#939#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-            <element signature="e#1193#1194#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,8 +753,8 @@
         <state relative-caret-position="162">
           <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding>
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -748,16 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#841#842#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#938#939#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-            <element signature="e#1193#1194#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,8 +803,8 @@
         <state relative-caret-position="162">
           <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding>
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -808,16 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#841#842#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#938#939#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-            <element signature="e#1193#1194#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,8 +853,8 @@
         <state relative-caret-position="180">
           <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -851,16 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#841#842#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#938#939#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-            <element signature="e#1193#1194#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -909,24 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/entity/Synset.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#841#842#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#938#939#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-            <element signature="e#1193#1194#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -934,7 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,11 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="30" column="61" lean-forward="false" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,9 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -976,39 +958,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/special.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        <state relative-caret-position="162">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/process/MeaningSDice.java">
+    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="47" column="41" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="66" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="64">
+          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding>
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/index.noun">
+    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/entity/Synset.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="101567" column="4" lean-forward="false" selection-start-line="101567" selection-start-column="4" selection-end-line="101567" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/data.noun">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="62951" column="345" lean-forward="false" selection-start-line="62951" selection-start-column="341" selection-end-line="62951" selection-end-column="345" />
+        <state relative-caret-position="144">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/data/WordnetData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-338">
-          <caret line="84" column="38" lean-forward="false" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+        <state relative-caret-position="234">
+          <caret line="87" column="40" lean-forward="false" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
           <folding>
             <element signature="e#11208#11209#0" expanded="true" />
             <element signature="e#11251#11252#0" expanded="true" />
@@ -1022,30 +999,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/process/Bilingual.java">
+    <entry file="file://$PROJECT_DIR$/data/index.noun">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="269" column="36" lean-forward="false" selection-start-line="269" selection-start-column="36" selection-end-line="269" selection-end-column="36" />
+        <state relative-caret-position="154">
+          <caret line="72543" column="40" lean-forward="false" selection-start-line="72543" selection-start-column="40" selection-end-line="72543" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/ev.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="196841" column="18" lean-forward="true" selection-start-line="196841" selection-start-column="18" selection-end-line="196841" selection-end-column="18" />
+        <state relative-caret-position="96">
+          <caret line="78723" column="1" lean-forward="true" selection-start-line="78723" selection-start-column="1" selection-end-line="78723" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/data/data.noun">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="207">
+          <caret line="78570" column="42" lean-forward="false" selection-start-line="78570" selection-start-column="42" selection-end-line="78570" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/process/MeaningSDice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="127" column="48" lean-forward="false" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="66" lean-forward="false" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dquang/wordnet/main/process/Bilingual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="211" column="25" lean-forward="true" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -37,7 +37,7 @@ public class Bilingual {
                 return result;
             }
         }
-        return cannotTranslate(synset);
+        return null;
     }
 
     /**
@@ -215,14 +215,12 @@ public class Bilingual {
                 List<String> result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, wordForms);
                 if (!result.isEmpty()) {
                     synsetMeaning
-                            .setCaseName("3.1B")
+                            .setCaseName("Case 3.1B")
                             .setMeanings(result);
                     return synsetMeaning;
                 }
 
                 List<WordForm> synonymousWordForms = getSynonymousWordFormList(wordForms);
-//                System.out.println(wordForms);
-//                System.out.println(synonymousWordForms);
                 result = getSimilarMeanings(wordForms, synonymousWordForms);
 
                 if (result.isEmpty()) {
@@ -266,10 +264,6 @@ public class Bilingual {
                         .setMeanings(result);
                 return synsetMeaning;
             }
-            for (WordForm wordForm : wordFormListInNearestSynsets) {
-                if (wordForm != null)
-                System.out.println(wordForm.getLemma() + ": " + wordForm.getMeanings());
-            }
             result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, wordFormListInNearestSynsets);
             if (!result.isEmpty()) {
                 synsetMeaning.setCaseName("3.2B")
@@ -293,19 +287,7 @@ public class Bilingual {
         if (synset.getWords().size() > 0) {
             List<WordForm> nounWordFormList = getNounWordFormListFromGloss(synset);
             List<WordForm> wordForms = wordnetData.getWordFormBySynset(synset);
-//            Set<String> resultSet = new HashSet<>();
-//            for (WordForm wordForm : wordForms) {
-//                for (WordForm nounWordform : nounWordFormList) {
-//                    resultSet.addAll(getCommonMeaningOfWordforms(wordForm, nounWordform));
-//                }
-//            }
-//            System.out.println(wordForms);
-//            for (WordForm wordForm : nounWordFormList) {
-//                System.out.println(wordForm.getLemma() + ": " + wordForm.getMeanings());
-//            }
-//            System.out.println();
             List<String> result = getSimilarMeanings(wordForms, nounWordFormList);
-
             if (!result.isEmpty()) {
                 synsetMeaning.setCaseName("Case 3.3A")
                         .setMeanings(result);
@@ -375,34 +357,25 @@ public class Bilingual {
         List<WordForm> nounWordFormListFromGloss = getNounWordFormListFromGloss(synset);
         List<WordForm> synonymousWordForm = getSynonymousWordFormList(wordForms);
         List<WordForm> synonymousWordFormFromGloss = getSynonymousWordFormList(nounWordFormListFromGloss);
-//        System.out.println("SYNSET INFORMATION");
-//        System.out.println(synset);
-//        System.out.println(nounWordFormListFromGloss);
-//        System.out.println("END INFORMATION");
         List<String> result = getSimilarMeanings(wordForms, synonymousWordFormFromGloss);
 
         if (result.isEmpty()) {
-//            System.out.println("fuck 1");
             result = getSimilarMeanings(synonymousWordForm, nounWordFormListFromGloss);
         }
 
         if (result.isEmpty()) {
-//            System.out.println("fuck 2");
             result = getSimilarMeanings(synonymousWordForm, synonymousWordFormFromGloss);
         }
 
         if (result.isEmpty()) {
-//            System.out.println("fuck 3");
             result = MeaningSDice.getMeaningListBaseOnSDice(wordForms, synonymousWordFormFromGloss);
         }
 
         if (result.isEmpty()) {
-//            System.out.println("fuck 4");
             result = MeaningSDice.getMeaningListBaseOnSDice(synonymousWordForm, nounWordFormListFromGloss);
         }
 
         if (result.isEmpty()) {
-//            System.out.println("fuck 4");
             result = MeaningSDice.getMeaningListBaseOnSDice(synonymousWordForm, synonymousWordFormFromGloss);
         }
 
@@ -623,7 +596,7 @@ public class Bilingual {
      * Find common meanings between input's meanings and all synonymous words.
      * If common meanings is empty, find common meaning between all synonymous words.
      *
-     * @param wordForms not null.
+     * @param synset not null.
      * @return common meanings of input's meaning and synonymous, or between all synonymous.
      */
     private List<String> getMeaningFromSynonymousDict(Synset synset) {

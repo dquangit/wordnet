@@ -20,9 +20,10 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         WordnetData.getInstance().loadData();
-        translateByWord("university");
-//        translateSynsetId("08303490");
-//        writeData();
+//        translateByWord("paper profit");
+//        translateByWord("paper loss");
+//        translateSynsetId("05778254");
+        writeData();
     }
 
     public static void gotoXY() {
@@ -46,25 +47,20 @@ public class Main {
 
     public static void translateSynsetId(String synsetId) {
         Synset synset = WordnetData.getInstance().getSynsetById(synsetId);
-        System.out.println(synset);
         System.out.println(new Bilingual().getSynsetMeaning(synset));
     }
 
     private static void writeData() throws IOException {
         Bilingual bilingual = new Bilingual();
-        Path path = Paths.get("/home/dquang/IdeaProjects/Test/data/quang.txt");
+        Path path = Paths.get("data/out.txt");
         BufferedWriter writer = Files.newBufferedWriter(path);
-//        List<SynsetMeaning> synsetMeanings = new ArrayList<>();
-        WordnetData.getInstance().getSynsets().forEach(new BiConsumer<String, Synset>() {
-            @Override
-            public void accept(String s, Synset synset) {
-                try {
-                    SynsetMeaning meaningList = bilingual.getSynsetMeaning(synset);
-//                   synsetMeanings.add(meaningList);
-                    writer.write(meaningList.toString() + "\n");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        WordnetData.getInstance().getSynsets().forEach((s, synset) -> {
+            try {
+                SynsetMeaning meaningList = bilingual.getSynsetMeaning(synset);
+                if (meaningList != null)
+                writer.write(meaningList.toString() + "\n");
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         });
         writer.close();

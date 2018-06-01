@@ -348,11 +348,11 @@ public class WordnetData {
             nearestSynsetIds.addAll(synset.getChildren());
         }
 
-        List<Synset> result = new ArrayList<>();
+        Set<Synset> result = new HashSet<>();
         for (String synsetId : nearestSynsetIds) {
             result.add(getSynsetById(synsetId));
         }
-        return result;
+        return new ArrayList<>(result);
     }
 
     public List<String> getSpecialCaseMeaning(String synsetId) {
